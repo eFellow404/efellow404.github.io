@@ -5,26 +5,26 @@
     <title> eFellow_'s website</title>
    </head>
    
-   <body> 	
-			<script>
-        /* Storing user's device details in a variable*/
-        let details = navigator.userAgent;
-  
-        /* Creating a regular expression 
-        containing some mobile devices keywords 
-        to search it in details string*/
-        let regexp = /android|iphone|kindle|ipad/i;
-  
-        /* Using test() method to search regexp in details
-        it returns boolean value*/
-        let isMobileDevice = regexp.test(details);
-  
-        if (isMobileDevice) {
-			window.location.href = "Surfing.html";
-        } else {
-            document.write("You are using Desktop");
-        }
-    </script>
+    <body> 	
+		<script>
+			/* Storing user's device details in a variable*/
+			let details = navigator.userAgent;
+	
+			/* Creating a regular expression 
+			containing some mobile devices keywords 
+			to search it in details string*/
+			let regexp = /android|iphone|kindle|ipad/i;
+	
+			/* Using test() method to search regexp in details
+			it returns boolean value*/
+			let isMobileDevice = regexp.test(details);
+	
+			if (isMobileDevice) {
+				window.location.href = "Surfing.html";
+			} else {
+				document.write("You are using Desktop");
+			}
+		</script>
 
 		<div class=main>
 			<table border="1" padding="20" align=center>
