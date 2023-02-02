@@ -76,3 +76,6 @@
 					background-color:black;
 					margin:4px;
 						}
+			tr.noBorder td {
+				border: 0;
+					}

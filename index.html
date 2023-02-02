@@ -5,7 +5,27 @@
     <title> eFellow_'s website</title>
    </head>
    
-   <body> 
+   <body> 	
+			<script>
+        /* Storing user's device details in a variable*/
+        let details = navigator.userAgent;
+  
+        /* Creating a regular expression 
+        containing some mobile devices keywords 
+        to search it in details string*/
+        let regexp = /android|iphone|kindle|ipad/i;
+  
+        /* Using test() method to search regexp in details
+        it returns boolean value*/
+        let isMobileDevice = regexp.test(details);
+  
+        if (isMobileDevice) {
+			window.location.href = "https://(youtube.com)";
+        } else {
+            document.write("You are using Desktop");
+        }
+    </script>
+
 		<div class=main>
 			<table border="1" padding="20" align=center>
 				<tr>
@@ -53,16 +73,22 @@
 						<a href=https://steamcommunity.com/id/eFellow_/ target="_blank" rel="noopener noreferrer"> <img width=100% height=100% src="img/steam.png"> </a>
 					</th>
 				</tr>
+				<tr border="0">
+					<th> 
+						<iframe src="https://incr.easrng.net/badge?key=efellow404; bg=img/incr.png" style="background: url(img/incr.png)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+					</th>
+				</tr>
 			</table>
 		</div>
 		<div width=30% height=40% align=right>
 			<table border="1" class=embed>
 				<tr>
 					<th> <iframe src="https://static.arcadespot.com/retroemulator.php?system=gba&amp;game=2016/02/pokemon-sapphire.zip" border="0" scrolling="no" style="border: 0px none; width: 600px; height: 400px;" id="game-box-iframe" allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; microphone; gamepad; accelerometer; encrypted-media; gyroscope;" frameborder="0"></iframe>
- </th>
+					</th>
 				</tr>
 			</table>
 		</div>
+			
    </body>
 
 </html> 
