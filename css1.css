@@ -1,6 +1,4 @@
 body { 
-    background-color:black;
-    background-position:center;
     background-size:cover;
     font-family:Tahoma;
     font-size:300%;
@@ -9,39 +7,59 @@ body {
 }
 .content {
     align: center;
-    width: 80%;
-    height: 36vh;
+    width: 95%;
+    height: 37vh;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
     color: black;
     border-radius: 8%;
     margin: 5%;
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        box-sizing: border-box;         /* Opera/IE 8+ */
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;    
+        box-sizing: border-box;         
 
 }
 .content1 {
     align: center;
-    width: 80%;
-    height: 36vh;
+    width: 95%;
+    height: 39vh;
     text-align: center;
-    padding: 20px;
-    background-color: white;
-    color: black;
-    border-radius: 8%;
-}
-.content {
-    align: center;
-    width: 80%;
-    height: 38vh;
-    text-align: center;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
     background-color: white;
     color: black;
     border-radius: 8%;
     margin: 5%;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;         
 }
 .imgbor {
     border-radius: 7%;
 }
+
+
+@keyframes color {
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #B8CC33; }
+    60%  { background: #FCCA00; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+  }
+  
+  body {
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
+    text-align: center;
+    padding: 2em;
+  }
+  h1 {
+    text-align: center;
+    font-family: 'Kavoon', sans-serif;
+    font-size: 2.5em;
+    color: white;
+  }
+  
+  
