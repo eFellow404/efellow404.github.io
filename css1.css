@@ -8,7 +8,7 @@ body {
 .content {
     align: center;
     width: 95%;
-    height: 37vh;
+    height: max-content;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 10px;
@@ -23,7 +23,7 @@ body {
 .content1 {
     align: center;
     width: 95%;
-    height: 39vh;
+    height: max-content;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px;
