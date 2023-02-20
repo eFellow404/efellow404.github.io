@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #000000;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #dcf02d;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  height: 4%;
+  }
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #75119c;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.profile {
+    position: relative;
+    left: 27%;
+    margin-top: 5%;
+    border-radius: 7%;
+    height: 30%;
+}
+
+.main {
+   float: right; 
+}
+
+.text {
+  position: relative;
+  right: -55%;
+  bottom: 32%;
+  background-color: #000000;
+  width: 30%;
+  height: 30%;
+  border-radius: 10%;
+  text-align: center;
+  font-family: tahoma;
+  font-size: 130%;
+  color: #FFA400;
+}
+

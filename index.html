@@ -1,11 +1,11 @@
-</html>
-   
-   <head>
-   <link rel="stylesheet" href="css.css">
-    <title> eFellow_'s website</title>
-   </head>
-   
-    <body> 	
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="iframe.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <title> eFellow404's test site</title>
+    </head>
+    <body>
 		<script>
 			let details = navigator.userAgent;
 			let regexp = /android|iphone|kindle|ipad/i;
@@ -17,39 +17,86 @@
 				document.write("");
 			}
 		</script>
-<center>
-	<div>
-		<div class=main>
-						 <p class=heading> Welcome to eFellow_'s site! </p> <br>
-						 <p> I post random stuff here. <br> </p>
-						 <p> You can find stuff I find cool in the colum on the left <br> </p>
-						 <p> A link to my steam profile in the center <br> </p>
-						 <p> Finally, an embed for pokemon sapphire so you can play it right from this site! <br> </p>
-		</div>
-</center>
-
-		<div align=left class=main1>
-						<a href=https://cyber.dabamos.de/88x31/ target="_blank" rel="noopener noreferrer">88x31 90s gifs</a> <br>
-						<a href=https://drive.google.com/file/d/1grVnhGB7OaJ4_SUR6hsCaPck2wDvft1P/view?usp=sharing target="_blank" rel="noopener noreferrer"> Modpack</a> <br>
-						<a href=https://anlucas.neocities.org/88x31Buttons target="_blank" rel="noopener noreferrer">More 88x31 90s gifs</a> <br>
-						<a href=https://www.youtube.com/channel/UCG3FeghikWfghzRdCkACu1Q target="_blank" rel="noopener noreferrer">YouTube</a> <br>
-						<a href=https://linuxmint.com/ target="_blank" rel="noopener noreferrer">LinuxMint</a> <br>
-						<a href=https://yesterweb.org/no-to-web3/ target="_blank" rel="noopener noreferrer">Anti web 3</a> <br>
-			</p>
-		</div>
-<center>
-		<div float=center class=main2>
-			<p> <h2> My steam profile </h2></p>
-						<a href=https://steamcommunity.com/id/eFellow_/ target="_blank" rel="noopener noreferrer"> <img width="90%" height="75%" src="img/steam.png"> </a>
-		</div>
-</center>
-		<div class=main3>
-			 <iframe src="https://static.arcadespot.com/retroemulator.php?system=gba&amp;game=2016/02/pokemon-sapphire.zip" border="0" scrolling="no" style=" position: absolute; right: 5%; top: 5%; border: 0px none; width: 90%; height: 90%;" id="game-box-iframe" allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; microphone; gamepad; accelerometer; encrypted-media; gyroscope;" frameborder="0"></iframe>
-		</div>
-		<div class=main4>
-			<a href=legacy.html target="_blank" rel="noopener noreferrer"> Have a look at the legacy site! </a>
-		</div>
-	</div>
-   </body>
-
-</html> 
+        <header>
+            <div class="container">
+              <img src="img/logo.png" alt="logo" class="logo">
+        
+              <nav>
+                <ul>
+                  <li><a href="https://github.com/eFellow404" target="_blank" rel="noopener noreferrer">Github Profile</a></li>
+                  <li><a href="https://steamcommunity.com/id/eFellow_/" target="_blank" rel="noopener noreferrer">Steam Profile</a></li>
+                  <li><a href="123.html"  target="_blank" rel="noopener noreferrer">First coding project</a></li>
+                  <li><a href="iframe.html" target="_blank" rel="noopener noreferrer">cool things</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div>
+            <img src="img/logo2.png" class="profile">
+          </div>
+          <div class="text">
+            <p>
+              <h1> Hey! I'm eFellow404 </h1><br> I enjoy playing games on pc and xbox (pc more) <br><br> I know how to code in html, css and I'm learning Lua <br><br> cheack the navogation bar above for some of my cool things!
+            </p>
+          </div>
+          <body>
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+              <img class="image" src="img/1.jpg" draggable="false" />
+              <img class="image" src="img/2.jpg" draggable="false" />
+              <img class="image" src="img/3.jpg" draggable="false" />
+              <img class="image" src="img/4.jpg" draggable="false" />
+              <img class="image" src="img/5.jpg" draggable="false" />
+              <img class="image" src="img/6.jpg" draggable="false" />
+              <img class="image" src="img/7.jpg" draggable="false" />
+              <img class="image" src="img/8.jpg" draggable="false" />
+              <img class="image" src="img/9.jpg" draggable="false" />
+            </div>
+            <script> 
+              const track = document.getElementById("image-track");
+              
+              const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+              
+              const handleOnUp = () => {
+                track.dataset.mouseDownAt = "0";  
+                track.dataset.prevPercentage = track.dataset.percentage;
+              }
+              
+              const handleOnMove = e => {
+                if(track.dataset.mouseDownAt === "0") return;
+                
+                const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+                      maxDelta = window.innerWidth / 2;
+                
+                const percentage = (mouseDelta / maxDelta) * -100,
+                      nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+                      nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+                
+                track.dataset.percentage = nextPercentage;
+                
+                track.animate({
+                  transform: `translate(${nextPercentage}%, -50%)`
+                }, { duration: 1200, fill: "forwards" });
+                
+                for(const image of track.getElementsByClassName("image")) {
+                  image.animate({
+                    objectPosition: `${100 + nextPercentage}% center`
+                  }, { duration: 1200, fill: "forwards" });
+                }
+              }
+              
+              /* -- Had to add extra lines for touch events -- */
+              
+              window.onmousedown = e => handleOnDown(e);
+              
+              window.ontouchstart = e => handleOnDown(e.touches[0]);
+              
+              window.onmouseup = e => handleOnUp(e);
+              
+              window.ontouchend = e => handleOnUp(e.touches[0]);
+              
+              window.onmousemove = e => handleOnMove(e);
+              
+              window.ontouchmove = e => handleOnMove(e.touches[0]);
+          </script>
+    </body>
+</html>
