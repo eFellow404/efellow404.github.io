@@ -1,0 +1,16 @@
+
+  #image-track > .image {
+    width: 27vmin;
+    height: 40vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 5%;
+    top: 70%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
