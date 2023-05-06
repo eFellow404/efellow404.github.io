@@ -41,6 +41,22 @@
                 <h1> Hey! I'm eFellow404 </h1><br> I enjoy playing games on pc and xbox (pc more) <br><br> I know how to code in html, css and I'm learning Lua <br><br> cheack the navogation bar above for some of my cool things!
               </p>
             </div>
+            <script>
+              let x, y;
+
+document.onmousemove = function(e) {
+    x = e.clientX;
+    y = e.clientY;
+    updateProps();
+};
+
+document.onscroll = updateProps;
+
+function updateProps() {
+    document.body.style.setProperty('--x',(x)+'px');
+    document.body.style.setProperty('--y',(y + document.documentElement.scrollTop)+'px');
+}
+            </script>
 
 
 

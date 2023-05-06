@@ -45,3 +45,12 @@ body {
     text-align: center;
     padding: 2em;
   }
+
+a {
+  text-decoration: none;
+  color: #9c00cc;
+}
+
+a:hover {
+  color: #9f00ff;
+}
