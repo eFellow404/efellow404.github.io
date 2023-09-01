@@ -57,6 +57,18 @@ nav li {
   position: absolute;
   right: 10%;
   top: 20%;
-  font-size: 23%;
+  font-size: 60%;
   font-family: tahoma;
+  text-align: center;
+  color: blue;
+}
+
+.bio2 {
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  font-size: 60%;
+  font-family: tahoma;
+  text-align: center;
+  color: yellow;
 }
