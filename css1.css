@@ -14,7 +14,7 @@ body {
   }
 
 .container {
-    padding-top: 9%;
+    padding-top: 15%;
     width: 50%;
     align: left:
     margin: 0 auto;
@@ -30,12 +30,13 @@ nav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 30px;
+
 }
 
 .black {
   background-color: black;
-  height: 40%;
+  height: 100%;
   width: 30%;
   position: absolute;
   left:  0%;
@@ -46,5 +47,9 @@ nav a {
 
 nav a:hover {
   color: cyan;
+}
+
+nav li {
+  padding-top: 25%;
 }
   
