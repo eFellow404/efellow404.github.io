@@ -13,54 +13,82 @@ body {
     color: white;
   }
 
-.container {
-    padding-top: 15%;
-    width: 50%;
-    align: left:
+  .container {
+    width: 80%;
     margin: 0 auto;
-}
-
-.logo {
-  float: left;
-  padding: 10px 0;
-  width: 25%;
   }
-
-nav a {
+  
+  header {
+    background: black;
+  }
+  
+  header::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .logo {
+    position: relative;
+    left: 5%;
+    top: 1%;
+    padding-bottom: 1%;
+    padding-top: 0.5%;
+    height: 50px;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+  
+    position: relative;
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 30px;
-
-}
-
-.black {
-  background-color: black;
-  height: 100%;
-  width: 30%;
-  position: absolute;
-  left:  0%;
-  top: 0%;
-  z-index: -5;
-  border-bottom-right-radius: 10px;
-}
-
-nav a:hover {
-  color: cyan;
-}
-
-nav li {
-  padding-top: 25%;
-}
+    font-size: 35%;
+  }
+  
+  nav a:hover {
+    color: white;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #75119c;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
 
 .bio {
   position: absolute;
   right: 10%;
-  top: 10%;
+  top: 20%;
   font-size: 50%;
   font-family: tahoma;
   text-align: center;
-  color: blue;
+  color: white;
 }
 
 .bio2 {
@@ -70,5 +98,5 @@ nav li {
   font-size: 60%;
   font-family: tahoma;
   text-align: center;
-  color: yellow;
+  color: transparent;
 }
