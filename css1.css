@@ -20,7 +20,6 @@ body {
   
   header {
     background: black;
-    height: 8%;
   }
   
   header::after {
@@ -50,7 +49,9 @@ body {
   
   nav li {
     display: inline-block;
-  
+    margin-right: 30px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
     position: relative;
   }
   
@@ -59,6 +60,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 70%;
+    float: center;
   }
   
   nav a:hover {
@@ -85,7 +87,7 @@ body {
   position: absolute;
   left: 10%;
   right: 10%;
-  top: 55%;
+  top: 45%;
   width: 80%;
   font-size: 60%;
   font-family: tahoma;
