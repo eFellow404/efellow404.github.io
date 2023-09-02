@@ -20,7 +20,7 @@ body {
   
   header {
     background: black;
-    height: 15%;
+    height: 8%;
   }
   
   header::after {
@@ -73,7 +73,7 @@ body {
   position: relative;
   right: 10%;
   left: 10%;
-  top: 20%;
+  top: 10%;
   width: 80%;
   font-size: 65%;
   font-family: tahoma;
@@ -83,10 +83,12 @@ body {
 
 .bio2 {
   position: absolute;
-  left: 35%;
-  top: 40%;
+  left: 10%;
+  right: 10%;
+  top: 45%;
+  width: 80%;
   font-size: 60%;
   font-family: tahoma;
   text-align: center;
-  color: transparent;
+  border-radius: 20px;
 }
