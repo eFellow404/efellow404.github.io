@@ -58,7 +58,7 @@ body {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 70%;
+    font-size: 50%;
   }
   
   nav a:hover {
@@ -70,10 +70,11 @@ body {
   }
 
 .bio {
-  position: absolute;
+  position: relative;
   right: 10%;
   left: 10%;
   top: 20%;
+  width: 80%;
   font-size: 50%;
   font-family: tahoma;
   text-align: center;
