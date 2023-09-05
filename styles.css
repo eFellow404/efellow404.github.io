@@ -65,7 +65,7 @@ header::after {
   top: 1%;
   padding-bottom: 1%;
   padding-top: 0.5%;
-  height: 50px;
+  height: 3.5vw;
 }
 
 nav {
@@ -80,7 +80,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-right: 70px;
+  margin-right: 4.5vw;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
 
@@ -91,7 +91,7 @@ nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 85%;
+  font-size: 0.85vw;
 }
 
 nav a:hover {
@@ -142,4 +142,32 @@ nav a:hover::before {
   color: black;
 }
 
+@media only screen and (max-width: 600px) {
+  nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2vw;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .logo {
+   height: 6vw;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.65vw;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .logo {
+    height: 2.5vw;
+  }
+}
