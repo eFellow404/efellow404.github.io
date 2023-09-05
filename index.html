@@ -13,6 +13,11 @@
         let regexp = /android|iphone|kindle|ipad/i;
         let isMobileDevice = regexp.test(details);
     
+      if (isMobileDevice) {
+          window.location.href = "Surfing.html";
+        } else {
+          document.write("");
+        }
       </script>
           <header>
               <div class="container">
