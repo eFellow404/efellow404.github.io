@@ -140,6 +140,7 @@ nav a:hover::before {
   font-family: tahoma;
   font-size: 130%;
   color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -197,10 +198,10 @@ nav a:hover::before {
 @media only screen and (max-width: 1300px) {
   .profile {
     position: absolute;
-    left: 20%;
-    right: 20%;
+    left: 25%;
+    right: 25%;
     bottom: 5%;
-    width: 60vw;
+    height: 30vw;
   }
 }
 
