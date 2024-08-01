@@ -25,14 +25,14 @@ nav {
 }
   
   nav a {
-    color: orangered;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
   
   nav a:hover {
-    color: orangered;
+    color: black;
 }
   
   nav a::before {
@@ -54,7 +54,7 @@ nav {
 
 body {
   height: 100vh;
-   background: black;
+   background: darkslategrey;
 
 }
 .fave {
@@ -82,11 +82,74 @@ body {
   border-radius: 5px;
 }
 
-.favestext {
-  color: purple;
-  font-size: 350%;
+
+.container {
+	margin: 0 auto;
   position: absolute;
-  left: 30%;
-  right: 30%;
-  top: -25%;
+  left: 5%;
+}
+
+.headtext {
+	margin: 0 auto;
+  position: absolute;
+  left: 43%;
+  font-size: 1cm;
+  color: black;
+}
+
+header {
+  background: grey;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 4.5vw;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7cm;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #75119c;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
 }
