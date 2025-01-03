@@ -4,238 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eFellow's Reviews</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add your stylesheet here -->
     <style>
-        /* Dark theme as default */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #333; /* Dark background */
-            color: #f4f4f4; /* Light text */
-            transition: background-color 0.3s, color 0.3s;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Default dark theme background */
+    color: #fff; /* Default dark theme text color */
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        header {
-            background-color: #222; /* Dark Header */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-        }
+body.light {
+    background-color: #f4f4f4; /* Light theme background */
+    color: #333; /* Light theme text color */
+}
 
-        header .home-button {
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            background-color: #9C27B0; /* Lighter Purple */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+header {
+    background-color: #000; /* Black Header */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
 
-        header .home-button:hover {
-            background-color: #7B1FA2; /* Darker Purple */
-        }
+header .home-button {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: #9C27B0; /* Lighter Purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-        /* Slider to toggle theme */
-        .theme-toggle {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            width: 50px;
-            height: 25px;
-            background-color: #ccc;
-            border-radius: 25px;
-            cursor: pointer;
-        }
+header .home-button:hover {
+    background-color: #7B1FA2; /* Darker Purple */
+}
 
-        .theme-toggle input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+/* Search Bar */
+.search-bar {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    display: block;
+    text-align: center;
+}
 
-        .theme-toggle .slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #fff;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
+.search-suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        .theme-toggle input:checked + .slider {
-            background-color: #9C27B0; /* Purple when checked */
-        }
+.search-suggestions.light {
+    background-color: #f4f4f4; /* Light theme for suggestions background */
+    border-color: #bbb;
+}
 
-        .theme-toggle .slider:before {
-            content: "";
-            position: absolute;
-            left: 5px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            transition: 0.3s;
-        }
+.search-suggestions.dark {
+    background-color: #444; /* Dark theme for suggestions background */
+    border-color: #666;
+}
 
-        .theme-toggle input:checked + .slider:before {
-            transform: translateX(25px);
-        }
+.search-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
 
-        /* Review Box Styles */
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            max-height: 80vh;
-            overflow-y: auto; /* Enable scrolling */
-            background-color: #444; /* Dark background for container */
-            padding: 20px;
-            border-radius: 5px;
-        }
+.search-suggestions div:hover {
+    background-color: #e0e0e0;
+}
 
-        .review-box {
-            background-color: #555; /* Dark review box */
-            border: 2px solid #777; /* Lighter border */
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 20px;
-            transition: box-shadow 0.3s;
-        }
+.search-suggestions.light div:hover {
+    background-color: #d0d0d0; /* Light theme hover effect */
+}
 
-        .review-box:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.search-suggestions div {
+    color: #333; /* Default text color */
+}
 
-        .review-title {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+/* Update text color based on the theme */
+body.light .search-suggestions div {
+    color: #333; /* Light theme text */
+}
 
-        .review-summary {
-            font-size: 1.1em;
-            margin: 10px 0;
-        }
+body.dark .search-suggestions div {
+    color: #fff; /* Dark theme text */
+}
 
-        .review-button {
-            display: inline-block;
-            background-color: #9C27B0; /* Lighter Purple */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+/* Review Boxes */
+.review-box {
+    background-color: #444; /* Dark background for review boxes */
+    border: 2px solid #555;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+    color: white; /* Dark theme text color */
+}
 
-        .review-button:hover {
-            background-color: #7B1FA2; /* Darker Purple */
-        }
+body.light .review-box {
+    background-color: #fff; /* Light review box background */
+    border-color: #ccc; /* Light review box border */
+    color: #333; /* Light theme text color for reviews */
+}
 
-        /* Light theme styles */
-        body.light-theme {
-            background-color: #f4f4f4; /* Light background */
-            color: #333;
-        }
+body.light .review-box .review-title,
+body.light .review-box .review-summary {
+    color: #333; /* Light theme text for titles and summaries */
+}
 
-        header.light-theme {
-            background-color: #000; /* Black header for light theme */
-        }
+.review-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        .container.light-theme {
-            background-color: white;
-        }
+.review-summary {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
 
-        .review-box.light-theme {
-            background-color: #fff;
-            border-color: #ddd;
-        }
+.review-button {
+    display: inline-block;
+    background-color: #9C27B0; /* Lighter Purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-        .review-button.light-theme {
-            background-color: #9C27B0;
-            color: white;
-        }
+.review-button:hover {
+    background-color: #7B1FA2; /* Darker Purple */
+}
 
-        .review-button.light-theme:hover {
-            background-color: #7B1FA2;
-        }
+/* Theme Toggle */
+.theme-slider {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 25px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+.slider.active {
+    background-color: #333;
+}
+
+.slider.active:before {
+    transform: translateX(25px);
+}
+
     </style>
 </head>
-<body class="dark-theme"> <!-- Default theme is dark -->
+<body>
     <header>
         <a href="index.html" class="home-button">Home</a>
         <h1>eFellow's Reviews</h1>
         <p>Your go-to place for honest and helpful reviews.</p>
-        <!-- Theme Toggle Slider -->
-        <label class="theme-toggle">
-            <input type="checkbox" id="theme-toggle" checked>
-            <span class="slider"></span>
-        </label>
     </header>
+
+    <!-- Light/Dark Mode Toggle -->
+    <div class="theme-slider">
+        <div class="slider" id="theme-toggle" onclick="toggleTheme()">
+            <div class="slider-circle"></div>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search for a game..." oninput="filterGames()">
+    
+    <!-- Search Suggestions -->
+    <div id="suggestions" class="search-suggestions"></div>
 
     <div class="container">
         <!-- Review Boxes for Games 1 to 10 -->
-        <div class="review-box">
+        <div class="review-box" data-game="game 1">
             <div class="review-title">Game 1: Amazing Gameplay!</div>
             <div class="review-summary">This game offers a unique experience with excellent mechanics and an engaging storyline. Highly recommended!</div>
             <a href="game1.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 2">
             <div class="review-title">Game 2: Great Action!</div>
             <div class="review-summary">A fantastic action-packed game with incredible graphics and intense gameplay. A must-try for action lovers!</div>
             <a href="game2.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 3">
             <div class="review-title">Game 3: Mixed Feelings</div>
             <div class="review-summary">The game had some great aspects, but certain features fell short of expectations. Still worth checking out!</div>
             <a href="game3.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 4">
             <div class="review-title">Game 4: Fantastic Visuals</div>
             <div class="review-summary">The graphics and sound design in this game are top-notch. It's visually stunning, but the gameplay could use some improvement.</div>
             <a href="game4.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 5">
             <div class="review-title">Game 5: A New Classic</div>
             <div class="review-summary">A truly refreshing experience that redefines the genre. Exciting, innovative, and highly replayable!</div>
             <a href="game5.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 6">
             <div class="review-title">Game 6: Stunning World</div>
             <div class="review-summary">The open world is breathtaking, with a variety of environments and challenges. Perfect for exploration enthusiasts!</div>
             <a href="game6.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 7">
             <div class="review-title">Game 7: Challenging Mechanics</div>
             <div class="review-summary">The gameplay is challenging but rewarding. It will push you to your limits, but it's worth every moment.</div>
             <a href="game7.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 8">
             <div class="review-title">Game 8: Excellent Combat</div>
             <div class="review-summary">The combat system is smooth and dynamic. If you're into action RPGs, this game is definitely for you.</div>
             <a href="game8.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 9">
             <div class="review-title">Game 9: Heartfelt Story</div>
             <div class="review-summary">A beautiful story that tugs at your heartstrings. The narrative is emotionally charged and memorable.</div>
             <a href="game9.html" class="review-button">Read Full Review</a>
         </div>
 
-        <div class="review-box">
+        <div class="review-box" data-game="game 10">
             <div class="review-title">Game 10: Fun For All Ages</div>
             <div class="review-summary">An incredibly fun and accessible game for players of all ages. It's simple yet addicting!</div>
             <a href="game10.html" class="review-button">Read Full Review</a>
@@ -243,26 +277,70 @@
     </div>
 
     <script>
-        // Switch between light and dark theme
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('change', () => {
-            document.body.classList.toggle('light-theme', !themeToggle.checked);
-            document.body.classList.toggle('dark-theme', themeToggle.checked);
-            document.querySelector('header').classList.toggle('light-theme', !themeToggle.checked);
-            document.querySelector('header').classList.toggle('dark-theme', themeToggle.checked);
-            document.querySelector('.container').classList.toggle('light-theme', !themeToggle.checked);
-            document.querySelector('.container').classList.toggle('dark-theme', themeToggle.checked);
-            document.querySelectorAll('.review-box').forEach(box => {
-                box.classList.toggle('light-theme', !themeToggle.checked);
-                box.classList.toggle('dark-theme', themeToggle.checked);
-            });
-            document.querySelectorAll('.review-button').forEach(button => {
-                button.classList.toggle('light-theme', !themeToggle.checked);
-                button.classList.toggle('dark-theme', themeToggle.checked);
-            });
-        });
-    </script>
+        const games = [
+            "Game 1: Amazing Gameplay!",
+            "Game 2: Great Action!",
+            "Game 3: Mixed Feelings",
+            "Game 4: Fantastic Visuals",
+            "Game 5: A New Classic",
+            "Game 6: Stunning World",
+            "Game 7: Challenging Mechanics",
+            "Game 8: Excellent Combat",
+            "Game 9: Heartfelt Story",
+            "Game 10: Fun For All Ages"
+        ];
 
+        const searchBar = document.getElementById("search-bar");
+        const suggestions = document.getElementById("suggestions");
+
+        // Filter game reviews based on search input
+        function filterGames() {
+            const query = searchBar.value.toLowerCase();
+            const matchingGames = games.filter(function(game) {
+                return game.toLowerCase().includes(query);
+            });
+
+            suggestions.innerHTML = "";
+            if (query) {
+                matchingGames.forEach(function(game) {
+                    const suggestionItem = document.createElement("div");
+                    suggestionItem.textContent = game;
+                    suggestionItem.onclick = function() {
+                        const gameName = game.split(":")[0].trim().toLowerCase().replace(/ /g, ""); // format the game name for URL
+                        window.location.href = `${gameName}.html`; // Redirect to the corresponding review page
+                    };
+                    suggestions.appendChild(suggestionItem);
+                });
+                suggestions.style.display = "block";
+            } else {
+                suggestions.style.display = "none";
+            }
+        }
+
+        // Check saved theme preference and apply it
+        if(localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light");
+            document.getElementById("theme-toggle").classList.add("active");
+        } else {
+            document.body.classList.remove("light");
+            document.getElementById("theme-toggle").classList.remove("active");
+        }
+
+        // Toggle theme function
+        function toggleTheme() {
+            document.body.classList.toggle("light");
+            const themeToggle = document.getElementById("theme-toggle");
+
+            // Toggle the active class to move the slider
+            themeToggle.classList.toggle("active");
+
+            // Save the user's theme preference to localStorage
+            if (document.body.classList.contains("light")) {
+                localStorage.setItem("theme", "light");
+            } else {
+                localStorage.setItem("theme", "dark");
+            }
+        }
+    </script>
 </body>
 </html>
-
