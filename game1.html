@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Review Template</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your stylesheet here -->
+    <style>
+        /* Default light theme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background */
+            color: #333; /* Dark text */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #333; /* Dark background */
+            color: #f4f4f4; /* Light text */
+        }
+
+        header {
+            background-color: #222; /* Dark Header */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        header .home-button {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background-color: #9C27B0; /* Lighter Purple */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        header .home-button:hover {
+            background-color: #7B1FA2; /* Darker Purple */
+        }
+
+        /* Review Content Container */
+        .review-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff; /* Lighter background for review container in light theme */
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 1000px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark theme background for review container */
+        .review-container.dark-theme {
+            background-color: #444; /* Dark background */
+            color: #f4f4f4; /* Light text */
+        }
+
+        /* Review Title */
+        .review-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Review Rating */
+        .rating {
+            font-size: 1.5em;
+            color: #FFB300; /* Yellow color for rating */
+            margin-bottom: 20px;
+        }
+
+        /* Review Text Area */
+        .review-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Image Section for Review */
+        .review-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .review-images img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 5px;
+        }
+
+        /* Button to go back to the reviews */
+        .back-button {
+            display: inline-block;
+            background-color: #9C27B0; /* Lighter Purple */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #7B1FA2; /* Darker Purple */
+        }
+
+        /* Slider styles */
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 50px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            border-radius: 50px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: #9C27B0; /* Purple */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+    </style>
+</head>
+<body> <!-- Body class will be dynamically set based on theme stored in localStorage -->
+
+    <header>
+        <a href="index.html" class="home-button">Home</a>
+        <h1>Game Review: Game Name</h1>
+    </header>
+
+    <!-- Theme switch slider -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="review-container">
+        <!-- Rating Section -->
+        <div class="rating">
+            Rating: <span id="rating-value">8.5/10</span>
+        </div>
+
+        <!-- Review Title -->
+        <div class="review-title">
+            Game Name: Amazing Gameplay! <!-- Title of the game -->
+        </div>
+
+        <!-- Review Text -->
+        <div class="review-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida lorem at nisl aliquet, sit amet volutpat odio volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus volutpat bibendum velit, non lacinia nunc fermentum eu. Aliquam erat volutpat. Curabitur mollis lacus at dolor facilisis, ac vestibulum enim interdum.
+            </p>
+            <p>
+                Sed imperdiet felis sit amet mi convallis, a varius purus cursus. Aenean vel neque ultricies, tincidunt erat in, viverra ante. Vivamus a eros neque. Cras euismod libero at risus varius, a elementum nulla interdum. Ut vitae mauris vel ipsum elementum dictum. Nulla facilisi. Integer ut urna at ante elementum tristique non et lorem.
+            </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="review-images">
+            <!-- Add as many images as needed -->
+            <img src="game-image1.jpg" alt="Game Image 1">
+            <img src="game-image2.jpg" alt="Game Image 2">
+            <img src="game-image3.jpg" alt="Game Image 3">
+        </div>
+
+        <!-- Button to go back to the reviews list -->
+        <a href="revs.html" class="back-button">Back to Reviews</a>
+    </div>
+
+    <script>
+        // Check if a theme preference is stored in localStorage
+        const checkbox = document.getElementById('checkbox');
+
+        // Check for the saved theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+            document.querySelector('.review-container').classList.add('dark-theme');
+            checkbox.checked = true;  // Set the slider to 'checked' position
+        }
+
+        // Listen for the theme switch
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                document.body.classList.add('dark-theme');
+                document.querySelector('.review-container').classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                document.querySelector('.review-container').classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>
