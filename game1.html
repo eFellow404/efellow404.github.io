@@ -167,6 +167,55 @@
             transform: translateX(26px);
         }
 
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            /* Mobile specific styles */
+            .review-container {
+                width: 95%; /* Ensure container takes most of the screen width */
+                padding: 15px;
+            }
+
+            .review-title {
+                font-size: 1.5em;
+            }
+
+            .rating {
+                font-size: 1.2em;
+            }
+
+            .review-text {
+                font-size: 1em;
+            }
+
+            .review-images img {
+                max-width: 100%; /* Ensure images scale well on mobile */
+            }
+
+            .theme-switch-wrapper {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Additional small screen adjustments for even smaller devices like phones in portrait mode */
+        @media (max-width: 480px) {
+            .review-title {
+                font-size: 1.3em;
+            }
+
+            .rating {
+                font-size: 1.1em;
+            }
+
+            .review-text {
+                font-size: 0.95em;
+            }
+
+            .review-images {
+                justify-content: center; /* Center images on small screens */
+            }
+        }
+
     </style>
 </head>
 <body> <!-- Body class will be dynamically set based on theme stored in localStorage -->
@@ -214,7 +263,7 @@
         </div>
 
         <!-- Button to go back to the reviews list -->
-        <a href="revs.html" class="back-button">Back to Reviews</a>
+        <a href="reviews.html" class="back-button">Back to Reviews</a>
     </div>
 
     <script>
