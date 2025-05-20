@@ -139,10 +139,11 @@ header nav {
 .box {
     flex: 1;
     max-width: 35%;
-    height: 10cm;
+    height: 8cm;
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 10px;
+    font-size: 15pt;
 }
 
 @media only screen and (max-width: 1500px) {
