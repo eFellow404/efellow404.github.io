@@ -24,6 +24,7 @@ body {
 .langlink:hover {
     color: purple;
     text-decoration: none;
+    cursor: context-menu;
 }
 
 nav a {
@@ -157,6 +158,37 @@ header nav {
     .box {
         flex: 0 0 50%;
         max-width: 45%;
-        height: 15cm;
+        height: 20cm;
     }
   }
+
+.news-spinner {
+    position: relative;
+    top: 2.5cm;
+    width: 100%;
+    background-color: plum;
+    color: purple;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 1cm;
+    margin: 0 auto;
+}
+
+.text-spinner {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+.text-spinner span {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(1000%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
