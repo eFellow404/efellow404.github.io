@@ -1,0 +1,162 @@
+body {
+    background-color: darkgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    color: white;
+    padding: 5px;
+}
+
+.main {
+    position: absolute;
+    text-align: center;
+    top: 5cm;
+    left: 42%;
+    right: 42%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.langlink {
+    color: grey;
+    text-decoration: none;
+}
+
+.langlink:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+nav a {
+    color: plum;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14pt;
+}
+
+nav a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    height: 2.5cm;
+}
+
+header nav {
+    width: 100%;
+    text-align: left;
+    height: 8%;
+    padding-left: 2%;
+    top: 0.9cm; 
+    float: center;
+    position: fixed;
+}
+
+@media only screen and (max-width: 1800px) {
+    .main {
+        width: 60%;
+        left: 20%;
+        right: 20%;
+        top: 4cm;
+    }
+  }
+
+@media only screen and (max-width: 2100px) {
+    .main {
+        top: 4cm;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .main {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        top: 4cm;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    nav {
+        float: center;
+        position: fixed;
+        top: 0.8cm;
+    }
+  }
+
+.intre {
+    position: absolute;
+    text-align: center;
+    top: 12cm;
+    left: 38%;
+    right: 38%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1800px) {
+    .intre {
+        width: 70%;
+        left: 15%;
+        right: 15%;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .intre {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+  }
+
+.box-container {
+    position: absolute;
+    top: 15cm;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height:10cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.box {
+    flex: 1;
+    max-width: 35%;
+    height: 10cm;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .box-container {
+        top: 15cm;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height:20cm;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box {
+        flex: 0 0 50%;
+        max-width: 45%;
+        height: 15cm;
+    }
+  }

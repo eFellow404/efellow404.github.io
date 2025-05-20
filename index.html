@@ -1,65 +1,55 @@
 <html>
     <head>
-        <link href="styles.css" rel="stylesheet" type="text/css">
-        <link href="iframe.css" rel="stylesheet" type="text/css">
+        <link href="index.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="img/logo3.png">
+        <script src="index.js"></script>
         <meta charset="UTF-8">
         <title> eFellow's Site</title>
     </head>
     <body>
-      <div class="bg"></div>
-      <script>
-        let details = navigator.userAgent;
-        let regexp = /android|iphone|kindle|ipad/i;
-        let isMobileDevice = regexp.test(details);
-    
-      if (isMobileDevice) {
-          window.location.href = "Surfing.html";
-        } else {
-          document.write("");
-        }
-      </script>
-          <header>
-              <div class="container">
-                <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
-          
-                <nav>
-                  <ul>
-                    <li><a href="https://github.com/eFellow404" target="_blank" rel="noopener noreferrer">Github Profile</a></li>
-                    <li><a href="https://steamcommunity.com/id/eFellow_/" target="_blank" rel="noopener noreferrer">Steam Profile</a></li>
-                    <li><a href="123.html"  target="_blank" rel="noopener noreferrer">First coding project</a></li>
-                    <li><a href="main.html" target="_blank" rel="noopener noreferrer">Old site (very bad)</a></li>
-                    <li><a href="revs.html" target="_blank" rel="noopener noreferrer">Game reviews</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </header>
-            <div>
-              <img src="img/logo2.png" class="profile">
+        <header>
+
+            <nav>
+                <li><a href="https://github.com/eFellow404" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+                <li><a href="https://steamcommunity.com/id/eFellow_/" target="_blank" rel="noopener noreferrer">Steam Profile</a></li>
+                <li><a href="old/index.html" target="_blank" rel="noopener noreferrer">Old Sites</a></li>
+            </nav>
+        </header>
+        <div class="main">
+            <h2>Welcome to eFellow's site!</h2>
+            <p>This is my personal site</p>
+            <p>The nav bar has a few things about me</p>
+            <p>I speak English and <a href="indexdeutsch.html" rel="noopener noreferrer" class="langlink">German</a><br>Feel free to communicate to me in either</p>
+        </div>
+        <div class="intre">
+            <h2>Here are some of my interests</h2>
+        </div>
+        <div class="box-container"> 
+            <div class="box">
+                <h2> Politics</h2>
+                <p> I'm a Socialist <br> In relation to modern parties, I relate most to "Die Linke" in Germany</p>
+                <p> I'm a big fan of political theory books. Some of my favourites are: <br> Das Kapital - Karl Marx <br> The Soviets expected it - Anna strong</p>
+                <p> I make great use of the ☭ <br>This does not mean I support the USSR<br>It symbolises the unity between agricultural workers and factory workers</p>
             </div>
-            <div class="text">
-              <p>
-                <h1> Hey! I'm eFellow </h1><br> Things on this site are broken right now sorry (under construction)<br><br>I enjoy playing games on pc and xbox (pc more) <br><br> I know how to code in a few languages  <br><br> check the navigation bar above for some of my cool things!
-              </p>
+            <div class="box">
+                <h2>Programming</h2>
+                <p>I'm very interested in Computer Science and programming<br>I've ran linux for years</p>
+                <p>The languages I enjoy to program in are:<br>Lua<br>C<br>Web Dev</p>
+                <p>I'm persuing CS and Maths at university</p>
+                <p>I first learned how to program through Scratch<br><a href="old/123.html" target="_blank" rel="noopener noreferrer" class="langlink">This</a> was my first coding project</p>
             </div>
-            <script>
-              let x, y;
-
-document.onmousemove = function(e) {
-    x = e.clientX;
-    y = e.clientY;
-    updateProps();
-};
-
-document.onscroll = updateProps;
-
-function updateProps() {
-    document.body.style.setProperty('--x',(x)+'px');
-    document.body.style.setProperty('--y',(y + document.documentElement.scrollTop)+'px');
-}
-            </script>
-
-
-
+            <div class="box">
+                <h2>Gaming</h2>
+                <p>Playing games is a big hobby of mine<br>I mostly play Automation or city building games alone<br>When with friend I mostly play FPS games</p>
+                <p>I play a lot of games, some of my favourites are:<br>Satisfactory<br>Cities: Skylines 2<br>Slime Rancher</p>
+                <p>Some of my favourite FPS games are:<br>CS:GO<br>Rainbow 6 Siege<br>Overwatch</p>
+            </div>
+            <div class="box">
+                <h2>Media Preservation</h2>
+                <p>I love to preserve old media, especially old games and TV shows I'm intersted in</p>
+                <p>I have a huge collection of xbox 360 games<br>I collect multiple game series such as:<br>Halo<br> Assassin's creed<br>Mass Effect</p>
+                <p>Some of my favourite Movies and TV shows are:<br>The Matrix<br>Rome (HBO)<br>Star Wars</p>
+            </div>
+        </div>
     </body>
 </html>

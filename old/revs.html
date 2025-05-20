@@ -30,16 +30,19 @@ header .home-button {
     position: absolute;
     top: 10px;
     left: 20px;
-    background-color: #9C27B0; /* Lighter Purple */
-    color: white;
     padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
-header .home-button:hover {
-    background-color: #7B1FA2; /* Darker Purple */
+header .home-button-logo {
+    height:3vw;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1600px) {
+    header .home-button-logo {
+    height:0vw;
+    border-radius: 5px;
+}
 }
 
 /* Search Bar */
@@ -195,7 +198,7 @@ body.light .review-box .review-summary {
 </head>
 <body>
     <header>
-        <a href="index.html" class="home-button">Home</a>
+        <a href="index.html" class="home-button"><img src="img/logo.png" class="home-button-logo"></a>
         <h1>eFellow's Reviews</h1>
         <p>Your go-to place for honest and helpful reviews.</p>
     </header>
