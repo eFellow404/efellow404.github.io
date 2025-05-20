@@ -128,7 +128,7 @@ header nav {
     left: 5%;
     right: 5%;
     width: 90%;
-    height:12cm;
+    height:15cm;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +139,7 @@ header nav {
 .box {
     flex: 1;
     max-width: 35%;
-    height: 12cm;
+    height: 15cm;
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 10px;
