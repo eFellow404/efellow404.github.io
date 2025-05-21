@@ -64,12 +64,11 @@ header nav {
     position: fixed;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1600px) {
     .main {
         width: 60%;
         left: 20%;
         right: 20%;
-        top: 4cm;
     }
   }
 
@@ -81,10 +80,11 @@ header nav {
 
 @media only screen and (max-width: 600px) {
     .main {
-        width: 90%;
-        left: 5%;
-        right: 5%;
+        width: 98%;
+        left: 1%;
+        right: 1%;
         top: 4cm;
+        font-size: 2vh;
     }
   }
 
@@ -106,7 +106,7 @@ header nav {
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (min-width: 600px) and (max-width: 1600px) {
     .intre {
         width: 70%;
         left: 15%;
@@ -186,6 +186,7 @@ header nav {
         box-sizing: border-box;
     }
   }
+
 .news-spinner {
     position: relative;
     top: 2.5cm;
