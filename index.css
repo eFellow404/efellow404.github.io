@@ -147,7 +147,7 @@ header nav {
     box-sizing: border-box; 
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1500px) {
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
     .box-container {
         top: 15cm;
         left: 5%;
@@ -167,7 +167,7 @@ header nav {
     }
   }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .box-container {
         top: 15cm;
         left: 5%;
