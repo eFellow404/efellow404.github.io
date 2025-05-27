@@ -80,11 +80,12 @@ header nav {
 
 @media only screen and (max-width: 1000px) {
     .main {
-        width: 98%;
+        width: auto;
         left: 1%;
         right: 1%;
         top: 4cm;
-        font-size: 2mm;
+        font-size: 2vh;
+        height: auto;
     }
   }
 
