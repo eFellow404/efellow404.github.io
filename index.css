@@ -112,6 +112,7 @@ header nav {
         width: 70%;
         left: 15%;
         right: 15%;
+        top:20cm;
     }
   }
 
@@ -120,7 +121,7 @@ header nav {
         width: 90%;
         left: 5%;
         right: 5%;
-        top: 15cm;
+        top: 25cm;
     }
   }
 
@@ -151,11 +152,11 @@ header nav {
 
 @media only screen and (min-width: 1000px) and (max-width: 1500px) {
     .box-container {
-        top: 15cm;
+        top: 20cm;
         left: 5%;
         right: 5%;
         width: 90%;
-        height:auto;
+        height: auto;
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
@@ -171,7 +172,7 @@ header nav {
 
 @media only screen and (max-width: 1000px) {
     .box-container {
-        top: 20cm;
+        top: 25cm;
         left: 5%;
         right: 5%;
         width: 90%;
