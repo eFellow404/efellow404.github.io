@@ -6,7 +6,6 @@ button.addEventListener('click', function() {
     header.classList.toggle('light-news-spinner');
 });
 
-// Initial link
 const German = document.getElementById('german');
 German.addEventListener('click', function (e) {
     e.preventDefault();
