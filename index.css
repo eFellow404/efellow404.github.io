@@ -1,5 +1,5 @@
 body {
-    background-color: plum;
+    background-color: #10002B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
     color: white;
@@ -69,8 +69,8 @@ body {
     }
 }
 
-.darkbody {
-    background-color: #10002B;
+.lightbody {
+    background-color: plum;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
     color: white;
@@ -137,7 +137,7 @@ header nav {
     position: relative;
     top: 2.5cm;
     width: 100%;
-    background-color: plum;
+    background-color: #10002B;
     color: purple;
     overflow: hidden;
     white-space: nowrap;
@@ -165,7 +165,7 @@ header nav {
 }
 
 button {
-    background-color: #4f46e5;
+    background-color: #20113B;
     color: white;
     padding: 0.6em 1.2em;
     border: none;
@@ -174,21 +174,21 @@ button {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
-  }
+}
   
-  button:hover {
-    background-color: #4338ca;
+button:hover {
+    background-color: #994499;
     transform: scale(1.05);
-  }
+}
   
-  button:active {
+button:active {
     background-color: #3730a3;
     transform: scale(0.98);
-  }
+}
   
 
-.dark-news-spinner {
-    background-color: #10002B;
+.light-news-spinner {
+    background-color: plum;
 }
 
 .githubicon {
