@@ -1,8 +1,8 @@
 <html>
     <head>
         <link href="index.css" rel="stylesheet" type="text/css">
-        <link rel="icon" href="img/logo3.png">
-        <script src="index.js"></script>
+        <link rel="icon" href="img/logo.png">
+        <script src="index.js" defer></script>
         <meta charset="UTF-8">
         <title> eFellow's Seite</title>
     </head>
@@ -10,12 +10,28 @@
         <header>
 
             <nav>
-                <li><a href="https://github.com/eFellow404" target="_blank" rel="noopener noreferrer">GitHub Profil</a></li>
-                <li><a href="https://steamcommunity.com/id/eFellow_/" target="_blank" rel="noopener noreferrer">Steam Profil</a></li>
-                <li><a href="old/index.html" target="_blank" rel="noopener noreferrer">Alte Seiten</a></li>
+                <ul class="nav-list">
+                    <li>
+                        <button id="themechange" class="changetheme">Change theme</button>
+                    </li>
+                    <li>
+                        <a href="https://github.com/eFellow404" target="_blank" rel="noopener noreferrer">
+                            <img src="img/github.png" class="githubicon" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://steamcommunity.com/id/eFellow_/" target="_blank" rel="noopener noreferrer">
+                            <img src="img/steamlogo.jpg" class="steamlogo" alt="steam">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="old/index.html" target="_blank" rel="noopener noreferrer">Alte Seiten</a>
+                    </li>
+                </ul>
             </nav>
+              
         </header>
-        <div class="news-spinner">
+        <div id="news-spinner" class="news-spinner">
             <div class="text-spinner">
                 <span>Willkommen auf eFellow's Seite!</span>
             </div>

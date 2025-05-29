@@ -7,13 +7,74 @@ body {
 }
 
 .main {
-    position: absolute;
     text-align: center;
-    top: 5cm;
-    left: 42%;
-    right: 42%;
+    width: fit-content;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        width: 98%;
+    }
+}
+
+.intre {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.box {
+    flex: 1;
+    max-width: 35%;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15pt;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+/* Responsive updates */
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+    .box {
+        flex: 0 0 49%;
+        max-width: 49%;
+        font-size: 3vh;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: 3vh;
+    }
+}
+
+.darkbody {
+    background-color: #10002B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    color: white;
+    padding: 5px;
 }
 
 .langlink {
@@ -51,7 +112,7 @@ header {
     left: 0;
     z-index: 1000;
     background-color: black;
-    height: 2.5cm;
+    height: 2.7cm;
 }
 
 header nav {
@@ -64,129 +125,11 @@ header nav {
     position: fixed;
 }
 
-@media only screen and (max-width: 1600px) {
-    .main {
-        width: 60%;
-        left: 20%;
-        right: 20%;
-    }
-  }
-
-@media only screen and (max-width: 2100px) {
-    .main {
-        top: 4cm;
-    }
-  }
-
-@media only screen and (max-width: 1000px) {
-    .main {
-        width: auto;
-        left: 1%;
-        right: 1%;
-        top: 4cm;
-        font-size: 2vh;
-        height: auto;
-    }
-  }
-
 @media only screen and (max-width: 600px) {
     nav {
         float: center;
         position: fixed;
         top: 0.8cm;
-    }
-  }
-
-.intre {
-    position: absolute;
-    text-align: center;
-    top: 12cm;
-    left: 38%;
-    right: 38%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1600px) {
-    .intre {
-        width: 70%;
-        left: 15%;
-        right: 15%;
-        top:20cm;
-    }
-  }
-
-@media only screen and (max-width: 600px) {
-    .intre {
-        width: 90%;
-        left: 5%;
-        right: 5%;
-        top: 25cm;
-    }
-  }
-
-.box-container {
-    position: absolute;
-    top: 15cm;
-    left: 5%;
-    right: 5%;
-    width: 90%;
-    height:auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    align-items: stretch;
-}
-
-.box {
-    flex: 1;
-    max-width: 35%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border-radius: 10px;
-    font-size: 15pt;
-    box-sizing: border-box; 
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1500px) {
-    .box-container {
-        top: 20cm;
-        left: 5%;
-        right: 5%;
-        width: 90%;
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch;
-    }
-    .box {
-        flex: 0 0 50%;
-        max-width: 45%;
-        height: auto;
-        font-size: 3vh;
-        box-sizing: border-box;
-    }
-  }
-
-@media only screen and (max-width: 1000px) {
-    .box-container {
-        top: 25cm;
-        left: 5%;
-        right: 5%;
-        width: 90%;
-        height:auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch;
-    }
-    .box {
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: auto;
-        font-size: 3vh;
-        box-sizing: border-box;
     }
   }
 
@@ -220,3 +163,63 @@ header nav {
         transform: translateX(-100%);
     }
 }
+
+button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #3730a3;
+    transform: scale(0.98);
+  }
+  
+
+.dark-news-spinner {
+    background-color: #10002B;
+}
+
+.githubicon {
+    width: 40px;
+    background-color: white;
+}
+
+nav ul.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+nav ul.nav-list li {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+  
+.githubicon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+
+.steamlogo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    vertical-align: middle;
+  }
