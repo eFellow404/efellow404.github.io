@@ -22,9 +22,18 @@ body {
         font-size: 2rem;
     }
 
-    .intre {
+    .intre{
         font-size: 1.5rem;
     }
+}
+
+.main-mobile {
+    width: 98%;
+    font-size: 2rem;
+}
+
+.intre-mobile{
+    font-size: 1.5rem;
 }
 
 .intre {
