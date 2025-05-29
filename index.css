@@ -16,7 +16,7 @@ body {
     padding: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .main {
         width: 98%;
     }
@@ -125,7 +125,7 @@ header nav {
     position: fixed;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     nav {
         float: center;
         position: fixed;
@@ -211,15 +211,15 @@ nav ul.nav-list li {
   }
   
 .githubicon {
-    width: 45px;
-    height: 45px;
+    width: 3rem;
+    height: 3rem;
     object-fit: contain;
     vertical-align: middle;
   }
 
 .steamlogo {
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     object-fit: contain;
     vertical-align: middle;
   }
