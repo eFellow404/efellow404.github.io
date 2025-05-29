@@ -51,7 +51,7 @@ function setGermanContent() {
                 <div class="box">
                     <h2>Informatik</h2>
                     <p>Ich interessiere mich sehr für Informatik und Programmierung<br>Ich benutze Linux seit zwei Jahren</p>
-                    <p>Die Programmiersprachen, die ich gerne benutze, sind:<br>Lua<br>C<br>Web Dev</p>
+                    <p>Die Programmiersprachen, die ich gerne benutze, sind:<br>Lua<br>JavaScript<br>Web Dev</p>
                     <p>Ich studiere Informatik und Mathematik an der Universität</p>
                     <p>Ich habe das Programmieren zuerst mit Scratch gelernt<br><a href="old/123.html" target="_blank" rel="noopener noreferrer" class="langlink">Das</a> war mein erstes Programmierprojekt</p>
                 </div>
@@ -104,7 +104,7 @@ function setEnglishContent() {
             <div class="box">
                 <h2>Programming</h2>
                 <p>I'm very interested in Computer Science and programming<br>I've ran linux for years</p>
-                <p>The languages I enjoy to program in are:<br>Lua<br>C<br>Web Dev</p>
+                <p>The languages I enjoy to program in are:<br>Lua<br>JavaScript<br>Web Dev</p>
                 <p>I'm persuing CS and Maths at university</p>
                 <p>I first learned how to program through Scratch<br><a href="old/123.html" target="_blank" rel="noopener noreferrer" class="langlink">This</a> was my first coding project</p>
             </div>
