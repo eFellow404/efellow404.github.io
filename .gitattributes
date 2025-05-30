@@ -1,0 +1,3 @@
+dist/* linguist-vendored=false
+vendor/* linguist-vendored=false
+.github/* linguist-vendored=false
