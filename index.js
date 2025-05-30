@@ -16,7 +16,8 @@ const aboutme = document.getElementById('main');
 const textspinner = document.getElementById('text-spinner');
 const interest = document.getElementById('intre')
 const old = document.getElementById('old')
-const boxcontent = document.getElementById('box-container')
+const boxcontent = document.getElementById('box-container');
+const themechange = document.getElementById('themechange')
 
 
 function setGermanContent() {
@@ -63,6 +64,10 @@ function setGermanContent() {
             <p>Ich habe eine riesige Sammlung von Xbox-360-Spielen<br>Ich sammle mehrere Spieleserien wie:<br>Halo<br>Assassin's Creed<br>Mass Effect</p>
             <p>Einige meiner Lieblingsfilme und Fernsehsendungen sind:<br>Die Matrix<br>Rome (HBO)<br>Star Wars</p>
         </div>
+    `;
+
+    themechange.innerHTML = `
+        Design ändern
     `;
 
 
@@ -113,6 +118,10 @@ function setEnglishContent() {
             <p>I have a huge collection of xbox 360 games<br>I collect multiple game series such as:<br>Halo<br> Assassin's creed<br>Mass Effect</p>
             <p>Some of my favourite Movies and TV shows are:<br>The Matrix<br>Rome (HBO)<br>Star Wars</p>
         </div>
+    `;
+
+    themechange.innerHTML = `
+        Change theme
     `;
 
     const germanLink = document.getElementById('german');
