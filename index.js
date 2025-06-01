@@ -1,27 +1,30 @@
-const button = document.getElementById('themechange');
-const header = document.getElementById('news-spinner');
+const webcontent = {
+    button: document.getElementById('themechange'),
+    header: document.getElementById('news-spinner'),
+    aboutme: document.getElementById('main'),
+    textspinner: document.getElementById('text-spinner'),
+    interest: document.getElementById('intre'),
+    old: document.getElementById('old'),
+    boxcontent: document.getElementById('box-container'),
+    German: document.getElementById('german'),
+};
 
-button.addEventListener('click', function() {
+//theme change button logic
+
+webcontent.button.addEventListener('click', function() {
     document.body.classList.toggle('lightbody');
-    header.classList.toggle('light-news-spinner');
+    webcontent.header.classList.toggle('light-news-spinner');
 });
 
-const German = document.getElementById('german');
-German.addEventListener('click', function (e) {
+//prevent the anchor from doing the default link and then load the setGermanContent function when the German hyperlink is clicked
+
+webcontent.German.addEventListener('click', function (e) {
     e.preventDefault();
     setGermanContent();
 });
 
-const aboutme = document.getElementById('main');
-const textspinner = document.getElementById('text-spinner');
-const interest = document.getElementById('intre')
-const old = document.getElementById('old')
-const boxcontent = document.getElementById('box-container');
-const themechange = document.getElementById('themechange')
-
-
 function setGermanContent() {
-    aboutme.innerHTML = `
+    webcontent.aboutme.innerHTML = `
         <h2>Willkommen auf eFellow's Seite!</h2>
         <p>Dies ist meine persönliche Seite</p>
         <p>Die Navigationsleiste enthält ein paar Informationen über mich</p>
@@ -29,15 +32,15 @@ function setGermanContent() {
         <br>Fühlen Sie sich frei, mit mir in einer der beiden Sprachen zu kommunizieren</p>
     `;
 
-    textspinner.innerHTML = `
+    webcontent.textspinner.innerHTML = `
         <span>Willkommen auf eFellow's Seite!</span>
     `;
 
-    interest.innerHTML = `
+    webcontent.interest.innerHTML = `
         <h2>meiner Interessen</h2>
     `;
 
-    boxcontent.innerHTML = `
+    webcontent.boxcontent.innerHTML = `
         <div class="box">
             <h2>Politik</h2>
             <p>Ich bin Sozialist<br>In Bezug auf moderne Parteien identifiziere ich mich am meisten mit Die Linke</p>
@@ -66,7 +69,7 @@ function setGermanContent() {
         </div>
     `;
 
-    themechange.innerHTML = `
+    webcontent.button.innerHTML = `
         Design ändern
     `;
 
@@ -76,22 +79,22 @@ function setGermanContent() {
 }
 
 function setEnglishContent() {
-    aboutme.innerHTML = `
+    webcontent.aboutme.innerHTML = `
         <h2>Welcome to eFellow's site!</h2>
         <p>This is my personal site</p>
         <p>The nav bar has a few things about me</p>
         <p>I speak English and <a href="#" id="german" class="langlink">German</a><br>Feel free to communicate to me in either</p>
     `;
 
-    textspinner.innerHTML = `
+    webcontent.textspinner.innerHTML = `
         <span>Welcome to eFellow's website!</span>
     `;
 
-    interest.innerHTML = `
+    webcontent.interest.innerHTML = `
         <h2>Here are some of my interests</h2>
     `;
 
-    boxcontent.innerHTML = `
+    webcontent.boxcontent.innerHTML = `
         <div class="box">
             <h2> Politics</h2>
             <p> I'm a Socialist <br> In relation to modern parties, I relate most to "Die Linke" in Germany</p>
@@ -120,7 +123,7 @@ function setEnglishContent() {
         </div>
     `;
 
-    themechange.innerHTML = `
+    webcontent.button.innerHTML = `
         Change theme
     `;
 
@@ -132,6 +135,9 @@ function isMobile() {
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   }
 
+//to see if the user is mobile and then change styles accordingly
+//note that there is a media query if it is <800px but for some reason my phone has a width of 1000 something px so I added this for edge cases
+
 const main = document.getElementById('main')
 const intre = document.getElementById('intre')
 
@@ -139,5 +145,6 @@ if (isMobile()) {
     main.classList.toggle('main-mobile');
     intre.classList.toggle('intre-mobile');
 }   else {
-    console.log('not mobile');
+    console.log('user is on Desktop');
 }
+

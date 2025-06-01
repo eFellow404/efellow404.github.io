@@ -1,3 +1,4 @@
+/* ====== General Body Styling ====== */
 body {
     background-color: #10002B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,6 +7,16 @@ body {
     padding: 5px;
 }
 
+/* Light theme toggle class */
+.lightbody {
+    background-color: plum; /* Light background for theme toggle */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    color: white;
+    padding: 5px;
+}
+
+/* ====== Main Content Section ====== */
 .main {
     text-align: center;
     width: fit-content;
@@ -16,6 +27,18 @@ body {
     padding: 1rem;
 }
 
+/* Interests section */
+.intre {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+/* Responsive styles for main and interests */
 @media only screen and (max-width: 800px) {
     .main {
         width: 98%;
@@ -36,16 +59,7 @@ body {
     font-size: 1.5rem;
 }
 
-.intre {
-    text-align: center;
-    width: fit-content;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    margin-top: 3rem;
-    padding: 1rem;
-}
-
+/* ====== Box Container and Cards ====== */
 .box-container {
     display: flex;
     justify-content: space-between;
@@ -66,7 +80,7 @@ body {
     padding: 1rem;
 }
 
-/* Responsive updates */
+/* Adjust boxes for tablets */
 @media only screen and (min-width: 1000px) and (max-width: 1500px) {
     .box {
         flex: 0 0 49%;
@@ -75,6 +89,7 @@ body {
     }
 }
 
+/* Adjust boxes for phones */
 @media only screen and (max-width: 1000px) {
     .box {
         flex: 0 0 100%;
@@ -83,23 +98,45 @@ body {
     }
 }
 
-.lightbody {
-    background-color: plum;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12pt;
-    color: white;
-    padding: 5px;
+/* ====== Navigation and Header ====== */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    height: 2.5cm;
 }
 
-.langlink {
-    color: grey;
-    text-decoration: none;
+header nav {
+    width: 100%;
+    top: 0.7cm;
+    float: center;
+    position: fixed;
 }
 
-.langlink:hover {
-    color: purple;
-    text-decoration: none;
-    cursor: context-menu;
+@media only screen and (max-width: 800px) {
+    nav {
+        float: center;
+        position: fixed;
+        top: 0.8cm;
+    }
+}
+
+nav ul.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+nav ul.nav-list li {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
 }
 
 nav a {
@@ -114,49 +151,32 @@ nav a:hover{
     text-decoration: none;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+/* ====== Icons ====== */
+.icon {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    vertical-align: middle;
     background-color: black;
-    height: 2.5cm;
 }
 
-header nav {
-    width: 100%;
-    text-align: left;
-    height: 8%;
-    padding-left: 2%;
-    top: 0.7cm; 
-    float: center;
-    position: fixed;
+.icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
 }
 
-@media only screen and (max-width: 800px) {
-    nav {
-        float: center;
-        position: fixed;
-        top: 0.8cm;
-    }
-  }
+.githubicon {
+    width: 40px;
+    background-color: white;
+}
 
+/* ====== Spinner Section ====== */
 .news-spinner {
-    position: relative;
-    top: 2.5cm;
-    width: 100%;
     background-color: #10002B;
-    color: purple;
-    overflow: hidden;
-    white-space: nowrap;
-    height: 1cm;
-    margin: 0 auto;
+}
+
+.light-news-spinner {
+    background-color: plum;
 }
 
 .text-spinner {
@@ -178,6 +198,7 @@ header nav {
     }
 }
 
+/* ====== Buttons and Interactions ====== */
 button {
     background-color: #20113B;
     color: white;
@@ -189,50 +210,25 @@ button {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
-  
+
 button:hover {
     background-color: #994499;
     transform: scale(1.05);
 }
-  
+
 button:active {
     background-color: #3730a3;
     transform: scale(0.98);
 }
-  
 
-.light-news-spinner {
-    background-color: plum;
+/* ====== Language Link Styles ====== */
+.langlink {
+    color: grey;
+    text-decoration: none;
 }
 
-.githubicon {
-    width: 40px;
-    background-color: white;
-}
-
-nav ul.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-nav ul.nav-list li {
-    display: inline-block;
-    margin: 0 15px;
-    vertical-align: middle;
-  }
-  
-.icon {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-    vertical-align: middle;
-    background-color: black;
-  }
-
-.icon:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s;
+.langlink:hover {
+    color: purple;
+    text-decoration: none;
+    cursor: context-menu;
 }
