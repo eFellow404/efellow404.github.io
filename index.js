@@ -131,12 +131,13 @@ function setEnglishContent() {
     germanLink.addEventListener('click', setGermanContent);
 };
 
-function isMobile() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
 
 //to see if the user is mobile and then change styles accordingly
 //note that there is a media query if it is <800px but for some reason my phone has a width of 1000 something px so I added this for edge cases
+
+function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
 
 const main = document.getElementById('main')
 const intre = document.getElementById('intre')
