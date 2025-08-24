@@ -26,7 +26,7 @@ webcontent.German.addEventListener('click', function (e) {
 function setGermanContent() {
     webcontent.aboutme.innerHTML = `
         <h2>Willkommen auf eFellow's Seite!</h2>
-        <p>Dies ist meine persönliche Seite</p>
+        <p>Ich studiere Informatik an der Universität St Andrews.</p>
         <p>Die Navigationsleiste enthält ein paar Informationen über mich</p>
         <p>Ich spreche <a href="#" id="english" class="langlink">Englisch</a> und Deutsch
         <br>Fühlen Sie sich frei, mit mir in einer der beiden Sprachen zu kommunizieren</p>
@@ -50,8 +50,8 @@ function setGermanContent() {
         <div class="box">
             <h2>Informatik</h2>
             <p>Ich interessiere mich sehr für Informatik und Programmierung<br>Ich benutze Linux seit zwei Jahren</p>
-            <p>Die Programmiersprachen, die ich gerne benutze, sind:<br>Lua<br>JavaScript<br>Web Dev</p>
-            <p>Ich studiere Informatik und Mathematik an der Universität</p>
+            <p>Die Programmiersprachen, die ich gerne benutze, sind:<br>Haskell<br>JavaScript<br>Web Dev</p>
+            <p>Ich lerne gern ungewöhnliche Programmiersprachen oder andere computerbezogene Dinge.</p>
             <p>Ich habe das Programmieren zuerst mit Scratch gelernt<br><a href="old/123.html" target="_blank" rel="noopener noreferrer" class="langlink">Das</a> war mein erstes Programmierprojekt<br>
                 <a href="old/index.html" target="_blank" rel="noopener noreferrer" class="langlink">Hier</a> sind meine alte Setien</p>
         </div>
